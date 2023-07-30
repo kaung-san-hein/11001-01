@@ -1,0 +1,218 @@
+.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+// main menu
+.navBar {
+  background-color: #121212;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(11, auto);
+  grid-gap: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navLogo {
+  padding-right: 20px;
+}
+
+.navLinks {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: lighter;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  svg {
+    padding-left: 20px;
+  }
+}
+
+.menuIcon {
+  display: none;
+}
+
+// hover submenu container
+.subNavLinkContainer {
+  width: 100%;
+  background-color: #121212;
+  padding: 18px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .subNavLinkWrapper {
+    width: 850px;
+  }
+
+  .subNavLink {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 850px) {
+    .subNavLinkWrapper {
+      width: 100%;
+    }
+  }
+}
+//
+
+// nav bar mobile
+.navBarMobile {
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  display: none;
+  z-index: 1000;
+
+  .mobileIconContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      flex: 1;
+      cursor: pointer;
+    }
+    .close {
+      flex: 1;
+      text-align: right;
+      cursor: pointer;
+    }
+  }
+
+  .navLinkMobile {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    svg {
+      padding-right: 20px;
+      display: none;
+    }
+
+    &:hover {
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  .subNavLinkMobile {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navBar {
+    justify-content: space-between;
+  }
+
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+
+  .navLogo {
+    padding-left: 20px;
+  }
+
+  .navMenu {
+    display: none;
+  }
+
+  .navBarMobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navBarMobile.active {
+    top: 0px;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// sub menu
+.subNavBar {
+  background-color: #121212;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+
+  .subContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 850px;
+  }
+
+  .subNavBrand {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 10px;
+  }
+
+  button {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    padding: 3px 10px;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 850px) {
+    .subNavBar {
+      display: none;
+    }
+    .subContainer {
+      width: 100%;
+      padding: 0px 10px;
+    }
+  }
+}

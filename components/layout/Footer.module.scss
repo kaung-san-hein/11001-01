@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+}
+
+.copyRight {
+  color: #cccccf;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.term {
+  color: #7e7e81;
+  font-size: 12px;
+}
+
+.location {
+  color: #7e7e81;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+  }
+
+  .term {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+
+  .location {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+}
